@@ -45,7 +45,11 @@ const TextTyper = ({
   return (
     <Markup>
       {typedText}
-      {isWaiting && <span className="blinking-cursor">|</span>}
+      {isWaiting ? (
+        <span className="blinking-cursor animate">|</span>
+      ) : (
+        <span className="blinking-cursor ">|</span>
+      )}
     </Markup>
   );
 };

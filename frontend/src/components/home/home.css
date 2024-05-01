@@ -35,6 +35,25 @@
     width: 38px;
     height: 38px;
     margin-left: 0.4rem;
+    transition: transform 0.3s ease;
+    /* Add transition for smooth animation */
+}
+
+.home__hand:hover {
+    animation: wave 0.25s ease-in-out infinite alternate;
+    /* Animation properties */
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+        /* Start position */
+    }
+
+    100% {
+        transform: rotate(-30deg);
+        /* End position */
+    }
 }
 
 .home__subtitle {
@@ -238,7 +257,7 @@
         grid-auto-flow: column;
         row-gap: 1rem;
         justify-self: center;
-        column-gap: 5rem;
+        column-gap: 4rem;
     }
 }
 
@@ -262,8 +281,11 @@
 
 /* ANIMATION CSS */
 .blinking-cursor {
-    animation: blink 1s infinite;
     font-weight: bold;
+}
+
+.blinking-cursor.animate {
+    animation: blink 1s infinite;
 }
 
 @keyframes blink {
