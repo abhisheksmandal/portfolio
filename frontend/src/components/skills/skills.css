@@ -69,6 +69,10 @@
     .skills__content {
         padding: 1.5rem;
     }
+
+    .skills__content {
+        margin: 0 2rem;
+    }
 }
 
 /* For small devices */
