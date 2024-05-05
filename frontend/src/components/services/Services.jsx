@@ -1,16 +1,59 @@
+import React, { useState } from "react";
 import {
+  AllInclusiveRounded,
   ArrowRightRounded,
   CheckCircleRounded,
   CloseRounded,
+  CodeRounded,
+  DataObjectRounded,
 } from "@mui/icons-material";
-import React, { useState } from "react";
 import "./services.css";
 
 const Services = () => {
   const [toggleState, setToggleState] = useState(0);
 
+  const servicesData = [
+    {
+      title: "Frontend Development",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae obcaecati iure suscipit explicabo commodi dolores temporibus eveniet adipisci laboriosam architecto quas deserunt minima, ab maxime numquam eligendi, dolorum laudantium rem.",
+      services: [
+        "I develop user interface.",
+        "Web page development.",
+        "Server Management",
+        "This is just a test Drive",
+      ],
+      icon: <CodeRounded />,
+    },
+    {
+      title: "Backend Development",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae obcaecati iure suscipit explicabo commodi dolores temporibus eveniet adipisci laboriosam architecto quas deserunt minima, ab maxime numquam eligendi, dolorum laudantium rem.",
+      services: [
+        "I develop user interface.",
+        "Web page development.",
+        "Server Management",
+        "This is just a test Drive",
+      ],
+      icon: <DataObjectRounded />,
+    },
+    {
+      title: "DevOps Engineering",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae obcaecati iure suscipit explicabo commodi dolores temporibus eveniet adipisci laboriosam architecto quas deserunt minima, ab maxime numquam eligendi, dolorum laudantium rem.",
+      services: [
+        "I develop user interface.",
+        "Web page development.",
+        "Server Management",
+        "This is just a test Drive",
+      ],
+      icon: <AllInclusiveRounded />,
+    },
+    // Add more service objects as needed
+  ];
+
   const toggleTab = (index) => {
-    setToggleState(index === toggleState ? 0 : index);
+    setToggleState(index);
   };
 
   return (
@@ -19,209 +62,54 @@ const Services = () => {
       <span className="section__subtitle">What I Offer</span>
 
       <div className="services__container container grid">
-        <div className="services__content">
-          <div>
-            <div className="services__icon">icon</div>
-            <h3 className="services__title">
-              Frontend
-              <br />
-              Development
-            </h3>
+        {servicesData.map((service, index) => (
+          <div className="services__content" key={index}>
+            <div>
+              <div className="services__icon">{service.icon}</div>
+              <h3 className="services__title">{service.title}</h3>
 
-            <span className="services__button" onClick={() => toggleTab(1)}>
-              View More
-              <span className="services__button-icon">
-                <ArrowRightRounded />
+              <span
+                className="services__button"
+                onClick={() => toggleTab(index + 1)}
+              >
+                View More
+                <span className="services__button-icon">
+                  <ArrowRightRounded />
+                </span>
               </span>
-            </span>
 
-            <div
-              className={
-                toggleState === 1
-                  ? "services__modal active-modal"
-                  : "services__modal"
-              }
-            >
-              <div className="services__modal-content">
-                <div className="services__modal-close">
-                  <CloseRounded onClick={() => toggleTab(0)} />
+              <div
+                className={
+                  toggleState === index + 1
+                    ? "services__modal active-modal"
+                    : "services__modal"
+                }
+              >
+                <div className="services__modal-content">
+                  <div className="services__modal-close">
+                    <CloseRounded onClick={() => toggleTab(0)} />
+                  </div>
+
+                  <h3 className="services__modal-title">{service.title}</h3>
+                  <p className="services__modal-description">
+                    {service.description}
+                  </p>
+
+                  <ul className="services__modal-services grid">
+                    {service.services.map((item, i) => (
+                      <li className="services__modal-service" key={i}>
+                        <div className="services__modal-icon">
+                          <CheckCircleRounded />
+                        </div>
+                        <p className="services__modal-info">{item}</p>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-
-                <h3 className="services__modal-title">Single Page Design</h3>
-                <p className="services__modal-description">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Beatae obcaecati iure suscipit explicabo commodi dolores
-                  temporibus eveniet adipisci laboriosam architecto quas
-                  deserunt minima, ab maxime numquam eligendi, dolorum
-                  laudantium rem.
-                </p>
-
-                <ul className="services__modal-services grid">
-                  <li className="services__modal-service">
-                    <div className="services__modal-icon">
-                      <CheckCircleRounded />
-                    </div>
-                    <p className="services__modal-info">
-                      I develop user interface.
-                    </p>
-                  </li>
-
-                  <li className="services__modal-service">
-                    <div className="services__modal-icon">
-                      <CheckCircleRounded />
-                    </div>
-                    <p className="services__modal-info">
-                      Web page development.
-                    </p>
-                  </li>
-
-                  <li className="services__modal-service">
-                    <div className="services__modal-icon">
-                      <CheckCircleRounded />
-                    </div>
-                    <p className="services__modal-info">Server Management</p>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="services__content">
-          <div>
-            <div className="services__icon">icon</div>
-            <h3 className="services__title">
-              Frontend
-              <br />
-              Development
-            </h3>
-
-            <span className="services__button" onClick={() => toggleTab(2)}>
-              View More
-              <span className="services__button-icon">
-                <ArrowRightRounded />
-              </span>
-            </span>
-
-            <div
-              className={
-                toggleState === 2
-                  ? "services__modal active-modal"
-                  : "services__modal"
-              }
-            >
-              <div className="services__modal-content">
-                <div className="services__modal-close">
-                  <CloseRounded onClick={() => toggleTab(0)} />
-                </div>
-
-                <h3 className="services__modal-title">Single Page Design</h3>
-                <p className="services__modal-description">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Beatae obcaecati iure suscipit explicabo commodi dolores
-                  temporibus eveniet adipisci laboriosam architecto quas
-                  deserunt minima, ab maxime numquam eligendi, dolorum
-                  laudantium rem.
-                </p>
-
-                <ul className="services__modal-services grid">
-                  <li className="services__modal-service">
-                    <div className="services__modal-icon">
-                      <CheckCircleRounded />
-                    </div>
-                    <p className="services__modal-info">
-                      I develop user interface.
-                    </p>
-                  </li>
-
-                  <li className="services__modal-service">
-                    <div className="services__modal-icon">
-                      <CheckCircleRounded />
-                    </div>
-                    <p className="services__modal-info">
-                      Web page development.
-                    </p>
-                  </li>
-
-                  <li className="services__modal-service">
-                    <div className="services__modal-icon">
-                      <CheckCircleRounded />
-                    </div>
-                    <p className="services__modal-info">Server Management</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="services__content">
-          <div>
-            <div className="services__icon">icon</div>
-            <h3 className="services__title">
-              Frontend
-              <br />
-              Development
-            </h3>
-
-            <span className="services__button" onClick={() => toggleTab(3)}>
-              View More
-              <span className="services__button-icon">
-                <ArrowRightRounded />
-              </span>
-            </span>
-
-            <div
-              className={
-                toggleState === 3
-                  ? "services__modal active-modal"
-                  : "services__modal"
-              }
-            >
-              <div className="services__modal-content">
-                <div className="services__modal-close">
-                  <CloseRounded onClick={() => toggleTab(0)} />
-                </div>
-
-                <h3 className="services__modal-title">Single Page Design</h3>
-                <p className="services__modal-description">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Beatae obcaecati iure suscipit explicabo commodi dolores
-                  temporibus eveniet adipisci laboriosam architecto quas
-                  deserunt minima, ab maxime numquam eligendi, dolorum
-                  laudantium rem.
-                </p>
-
-                <ul className="services__modal-services grid">
-                  <li className="services__modal-service">
-                    <div className="services__modal-icon">
-                      <CheckCircleRounded />
-                    </div>
-                    <p className="services__modal-info">
-                      I develop user interface.
-                    </p>
-                  </li>
-
-                  <li className="services__modal-service">
-                    <div className="services__modal-icon">
-                      <CheckCircleRounded />
-                    </div>
-                    <p className="services__modal-info">
-                      Web page development.
-                    </p>
-                  </li>
-
-                  <li className="services__modal-service">
-                    <div className="services__modal-icon">
-                      <CheckCircleRounded />
-                    </div>
-                    <p className="services__modal-info">Server Management</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );
