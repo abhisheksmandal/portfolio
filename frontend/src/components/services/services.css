@@ -9,6 +9,7 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: var(--container-color);
     padding: 6rem 0 2rem 2.5rem;
+    border-radius: 0.75rem;
 }
 
 .services__icon {
@@ -100,7 +101,7 @@
 .services__modal-service {
     display: flex;
     align-items: center;
-    column-gap: .5rem;
+    column-gap: 0.5rem;
 }
 
 .services__modal-icon {
@@ -108,8 +109,12 @@
     font-size: 1.1rem;
 }
 
+.services__modal-info {
+    font-size: var(--small-font-size);
+}
+
 /* Active Modal */
-.active__modal {
+.active-modal {
     opacity: 1;
     visibility: visible;
 }
