@@ -76,7 +76,7 @@ const Data = () => {
         consectetur culpa doloremque esse.
       </p>
 
-      <a href="#contact" className="button button--flex">
+      <a href="#contact" className="button home__button button--flex">
         Say Hello
         <svg
           className="button__icon"

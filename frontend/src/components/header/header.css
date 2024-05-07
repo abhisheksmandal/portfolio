@@ -1,9 +1,11 @@
 .header {
     width: 100%;
     position: fixed;
-    top: 2.5rem;
+    top: 0;
+    padding-top: 2.5rem;
     left: 0;
     z-index: var(--z-fixed);
+    backdrop-filter: blur(2.5px);
     /* background-color: var(--container-color); */
 }
 
@@ -61,6 +63,7 @@ font-weight: var(--font-medium);
     .header {
         top: initial;
         bottom: 0;
+        padding-top: 0;
     }
 
     .nav {
@@ -69,7 +72,7 @@ font-weight: var(--font-medium);
 
     .nav__menu {
         position: fixed;
-        bottom: -100%;
+        bottom: -500%;
         left: 0;
         width: 100%;
         background-color: var(--body-color);

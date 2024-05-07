@@ -40,19 +40,29 @@
 }
 
 .home__hand:hover {
-    animation: wave 0.25s ease-in-out infinite alternate;
+    animation: wave 1s ease-in-out infinite alternate;
     /* Animation properties */
 }
 
 @keyframes wave {
     0% {
         transform: rotate(0deg);
-        /* Start position */
+    }
+
+    25% {
+        transform: rotate(-30deg);
+    }
+
+    50% {
+        transform: rotate(30deg);
+    }
+
+    75% {
+        transform: rotate(-30deg);
     }
 
     100% {
-        transform: rotate(-30deg);
-        /* End position */
+        transform: rotate(0deg);
     }
 }
 
@@ -135,6 +145,28 @@
 .home__scroll-arrow {
     font-size: 1.25rem;
     color: var(--title-color);
+}
+
+@keyframes levitate {
+
+    0%,
+    100% {
+        transform: translateY(-20px);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+.home__button {
+    animation: levitate 3s ease-in-out infinite;
+    /* Adjust duration and easing as needed */
+}
+
+.home__button:hover {
+    animation-play-state: paused;
+    /* Pause the animation on hover */
 }
 
 /*=============== BREAKPOINTS ===============*/
