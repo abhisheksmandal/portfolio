@@ -2,7 +2,8 @@
     width: 100%;
     position: fixed;
     top: 0;
-    padding-top: 2.5rem;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
     left: 0;
     z-index: var(--z-fixed);
     backdrop-filter: blur(2.5px);
@@ -53,7 +54,8 @@ font-weight: var(--font-medium);
 
 /* Change background header */
 .scroll-header {
-    box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.15), 0 -4px 4px -4px rgba(0, 0, 0, 0.15);
+    /* First shadow for the bottom, second shadow for the top */
     /* Horizontal | Vertical | Blur | Spread | Color */
 }
 
@@ -64,6 +66,7 @@ font-weight: var(--font-medium);
         top: initial;
         bottom: 0;
         padding-top: 0;
+        padding-bottom: 0;
     }
 
     .nav {
