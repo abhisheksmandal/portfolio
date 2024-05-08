@@ -1,8 +1,20 @@
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { ArrowRightAltRounded } from "@mui/icons-material";
-import React from "react";
 import "./contact.css";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm("service_vdpiqgy", "template_0o0nno5", form.current, {
+      publicKey: "YZbIkZ7DftvUUdUb1",
+    });
+    e.target.reset();
+  };
+
   return (
     <section className="contact section" id="contact">
       <h2 className="section__title">Get in touch</h2>
@@ -46,7 +58,7 @@ const Contact = () => {
         <div className="content__content">
           <h3 className="contact__title">Write me your project</h3>
 
-          <form action="" className="contact__form">
+          <form ref={form} onSubmit={sendEmail} className="contact__form">
             <div className="contact__form-div">
               <label className="contact__form-tag">Name</label>
               <input
