@@ -151,11 +151,11 @@
 
     0%,
     100% {
-        transform: translateY(-20px);
+        transform: translateY(-0.5rem);
     }
 
     50% {
-        transform: translateY(20px);
+        transform: translateY(0.5rem);
     }
 }
 

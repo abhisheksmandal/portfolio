@@ -28,7 +28,7 @@ const Header = () => {
       <nav className="nav container">
         <a href="index.html" className="nav__logo">
           Abhishek Mandal
-          {/* <ToggleColorMode /> */}
+          <ToggleColorMode />
         </a>
 
         <Box className={Toggle ? "nav__menu show-menu" : "nav__menu"}>

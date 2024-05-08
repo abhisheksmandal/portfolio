@@ -11,26 +11,33 @@ function MyApp() {
   const colorMode = React.useContext(ColorModeContext);
 
   return (
-    <Box display="flex" justifyContent="center">
+    <Box display="inline-block" justifyContent="center">
       <IconButton
-        onClick={colorMode.toggleColorMode}
+        onClick={(event) => {
+          event.preventDefault(); // Prevent default behavior
+          colorMode.toggleColorMode();
+        }}
         color="inherit"
+        size="small"
+        type="button"
         sx={{
           zIndex: 5,
-          // width: "200px",
-          // borderRadius: "25px",
           bgcolor: theme.palette.mode === "dark" ? "white" : "black",
+          marginLeft: "0.5rem",
+          border: "2px solid grey",
+          // padding: "6px", // Adjust padding to make it smaller
           "&:hover": {
             "& .MuiSvgIcon-root": {
               color: "grey",
             },
+            borderColor: theme.palette.mode === "dark" ? "white" : "black",
           },
         }}
       >
         {theme.palette.mode === "dark" ? (
-          <Brightness7Icon sx={{ color: "black" }} />
+          <Brightness7Icon sx={{ fontSize: "medium", color: "black" }} /> // Adjust fontSize to make icon smaller
         ) : (
-          <Brightness4Icon sx={{ color: "white" }} />
+          <Brightness4Icon sx={{ fontSize: "medium", color: "white" }} /> // Adjust fontSize to make icon smaller
         )}
       </IconButton>
     </Box>

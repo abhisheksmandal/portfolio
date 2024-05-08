@@ -20,8 +20,8 @@
 
 .nav__logo,
 .nav__toggle {
-color: var(--title-color);
-font-weight: var(--font-medium);
+    color: var(--title-color);
+    font-weight: var(--font-medium);
 }
 
 .nav__list {
@@ -49,12 +49,12 @@ font-weight: var(--font-medium);
 .active-link,
 .nav__link:hover {
     color: var(--title-color-dark);
-    transform: scale(1.05);
+    transform: scale(1.25);
 }
 
 /* Change background header */
 .scroll-header {
-    box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.15), 0 -4px 4px -4px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--header-border-color)
     /* First shadow for the bottom, second shadow for the top */
     /* Horizontal | Vertical | Blur | Spread | Color */
 }
