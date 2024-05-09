@@ -1,35 +1,38 @@
+import React from "react";
 import {
   AssignmentTurnedInRounded,
   EmojiEventsRounded,
   SupportAgentRounded,
 } from "@mui/icons-material";
-import React from "react";
+
+const infoData = [
+  {
+    icon: <EmojiEventsRounded />,
+    title: "Experience",
+    subtitle: "1 Year Working",
+  },
+  {
+    icon: <AssignmentTurnedInRounded />,
+    title: "Completed",
+    subtitle: "5+ Projects",
+  },
+  {
+    icon: <SupportAgentRounded />,
+    title: "Support",
+    subtitle: "Online 24/7",
+  },
+];
 
 const Info = () => {
   return (
     <div className="about__info grid">
-      <div className="about__box">
-        <div className="about__icon">
-          <EmojiEventsRounded />
+      {infoData.map((item, index) => (
+        <div className="about__box" key={index}>
+          <div className="about__icon">{item.icon}</div>
+          <h3 className="about__title">{item.title}</h3>
+          <span className="about__subtitle">{item.subtitle}</span>
         </div>
-        <h3 className="about__title">Experience</h3>
-        <span className="about__subtitle">1 Years Working</span>
-      </div>
-
-      <div className="about__box">
-        <AssignmentTurnedInRounded />
-        <div className="about__icon"></div>
-        <h3 className="about__title">Completed</h3>
-        <span className="about__subtitle">5+ Projects</span>
-      </div>
-
-      <div className="about__box">
-        <div className="about__icon">
-          <SupportAgentRounded />
-        </div>
-        <h3 className="about__title">Support</h3>
-        <span className="about__subtitle">Online 24/7</span>
-      </div>
+      ))}
     </div>
   );
 };

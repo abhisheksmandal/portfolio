@@ -57,6 +57,7 @@ const Contact = () => {
         color: "var(--title-color)",
         backgroundColor: "var(--container-color)",
         alignItems: "center",
+        marginTop: "1rem",
       },
     });
   };

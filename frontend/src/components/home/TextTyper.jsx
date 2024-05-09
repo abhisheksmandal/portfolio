@@ -14,25 +14,33 @@ const TextTyper = ({
   const typingRender = (text, updater, interval) => {
     let localTypingIndex = 0;
     let localTyping = "";
-    if (text) {
-      intervalRef.current = setInterval(() => {
-        if (localTypingIndex < text.length) {
-          updater((localTyping += text[localTypingIndex]));
-          localTypingIndex += 1;
-        } else {
-          clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      if (!isWaiting && localTypingIndex < text.length) {
+        updater((localTyping += text[localTypingIndex]));
+        localTypingIndex += 1;
+      } else if (!isWaiting && localTypingIndex === text.length) {
+        setIsWaiting(true);
+        clearInterval(intervalRef.current);
+        setTimeout(() => {
+          setIsWaiting(false);
           setIsWaiting(true);
-          setTimeout(() => {
-            if (currentIndex < sentences.length - 1) {
-              setCurrentIndex(currentIndex + 1);
+          intervalRef.current = setInterval(() => {
+            if (localTypingIndex > 0) {
+              updater(
+                (localTyping = localTyping.substring(0, localTypingIndex - 1))
+              );
+              localTypingIndex -= 1;
             } else {
-              setCurrentIndex(0);
+              clearInterval(intervalRef.current);
+              setCurrentIndex((prevIndex) =>
+                prevIndex === sentences.length - 1 ? 0 : prevIndex + 1
+              );
+              setIsWaiting(false);
             }
-            setIsWaiting(false);
-          }, waitTime); // Wait for specified waitTime
-        }
-      }, interval);
-    }
+          }, interval);
+        }, waitTime); // Wait for specified waitTime
+      }
+    }, interval);
   };
 
   useEffect(() => {

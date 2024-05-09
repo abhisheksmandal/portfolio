@@ -1,5 +1,14 @@
-import { VerifiedRounded } from "@mui/icons-material";
 import React from "react";
+import { VerifiedRounded } from "@mui/icons-material";
+
+const backendSkills = [
+  { name: "PHP", level: "Beginner" },
+  { name: "NodeJS", level: "Intermediate" },
+  { name: "Python", level: "Intermediate" },
+  { name: "C/C++", level: "Intermediate" },
+  { name: "Java", level: "Intermediate" },
+  { name: "SQL", level: "Intermediate" },
+];
 
 const Backend = () => {
   return (
@@ -8,59 +17,16 @@ const Backend = () => {
 
       <div className="skills__box">
         <div className="skills__group">
-          <div className="skills__data">
-            <VerifiedRounded />
+          {backendSkills.map((skill, index) => (
+            <div className="skills__data" key={index}>
+              <VerifiedRounded />
 
-            <div>
-              <h3 className="skills__name">PHP</h3>
-              <span className="skills__level">Beginner</span>
+              <div>
+                <h3 className="skills__name">{skill.name}</h3>
+                <span className="skills__level">{skill.level}</span>
+              </div>
             </div>
-          </div>
-
-          <div className="skills__data">
-            <VerifiedRounded />
-
-            <div>
-              <h3 className="skills__name">NodeJS</h3>
-              <span className="skills__level">Intermediate</span>
-            </div>
-          </div>
-
-          <div className="skills__data">
-            <VerifiedRounded />
-
-            <div>
-              <h3 className="skills__name">Python</h3>
-              <span className="skills__level">Intermediate</span>
-            </div>
-          </div>
-
-          <div className="skills__data">
-            <VerifiedRounded />
-
-            <div>
-              <h3 className="skills__name">C/C++</h3>
-              <span className="skills__level">Intermediate</span>
-            </div>
-          </div>
-
-          <div className="skills__data">
-            <VerifiedRounded />
-
-            <div>
-              <h3 className="skills__name">Java</h3>
-              <span className="skills__level">Intermediate</span>
-            </div>
-          </div>
-
-          <div className="skills__data">
-            <VerifiedRounded />
-
-            <div>
-              <h3 className="skills__name">SQL</h3>
-              <span className="skills__level">Intermediate</span>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

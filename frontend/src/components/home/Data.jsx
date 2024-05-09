@@ -2,6 +2,12 @@ import React from "react";
 import TextTyper from "./TextTyper";
 
 const Data = () => {
+  const content = {
+    title: "Abhishek Mandal",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi iste nihil voluptatibus quibusdam possimus reprehenderit consequatur, consectetur culpa doloremque esse.",
+  };
+
   const sentences = [
     "DevOps System Administrator",
     "Freelancer",
@@ -11,7 +17,7 @@ const Data = () => {
   return (
     <div className="home__data">
       <h1 className="home__title">
-        Abhishek Mandal
+        {content.title}
         <svg
           width="36"
           height="36"
@@ -70,11 +76,7 @@ const Data = () => {
           waitTime={2000}
         />
       </h3>
-      <p className="home__description">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi iste
-        nihil voluptatibus quibusdam possimus reprehenderit consequatur,
-        consectetur culpa doloremque esse.
-      </p>
+      <p className="home__description">{content.description} </p>
 
       <a href="#contact" className="button home__button button--flex">
         Say Hello

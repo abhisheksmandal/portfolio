@@ -1,5 +1,13 @@
-import { VerifiedRounded } from "@mui/icons-material";
 import React from "react";
+import { VerifiedRounded } from "@mui/icons-material";
+
+const devOpsSkills = [
+  { name: "Linux", level: "Intermediate" },
+  { name: "Docker", level: "Intermediate" },
+  { name: "Ansible", level: "Intermediate" },
+  { name: "Git/GitHub", level: "Intermediate" },
+  { name: "Apache/Nginx", level: "Intermediate" },
+];
 
 const DevOps = () => {
   return (
@@ -8,50 +16,16 @@ const DevOps = () => {
 
       <div className="skills__box">
         <div className="skills__group">
-          <div className="skills__data">
-            <VerifiedRounded />
+          {devOpsSkills.map((skill, index) => (
+            <div className="skills__data" key={index}>
+              <VerifiedRounded />
 
-            <div>
-              <h3 className="skills__name">Linux</h3>
-              <span className="skills__level">Intermediate</span>
+              <div>
+                <h3 className="skills__name">{skill.name}</h3>
+                <span className="skills__level">{skill.level}</span>
+              </div>
             </div>
-          </div>
-
-          <div className="skills__data">
-            <VerifiedRounded />
-
-            <div>
-              <h3 className="skills__name">Docker</h3>
-              <span className="skills__level">Intermediate</span>
-            </div>
-          </div>
-
-          <div className="skills__data">
-            <VerifiedRounded />
-
-            <div>
-              <h3 className="skills__name">Ansible</h3>
-              <span className="skills__level">Intermediate</span>
-            </div>
-          </div>
-
-          <div className="skills__data">
-            <VerifiedRounded />
-
-            <div>
-              <h3 className="skills__name">Git/GitHub</h3>
-              <span className="skills__level">Intermediate</span>
-            </div>
-          </div>
-
-          <div className="skills__data">
-            <VerifiedRounded />
-
-            <div>
-              <h3 className="skills__name">Apache/Nginx</h3>
-              <span className="skills__level">Intermediate</span>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
