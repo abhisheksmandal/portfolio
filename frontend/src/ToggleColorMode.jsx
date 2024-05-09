@@ -53,7 +53,7 @@ function ToggleColorMode() {
     --title-color: hsl(var(--hue), var(--sat), 90%);
     /* Define other dark mode variables here */
     --title-color-dark: hsl(var(--hue), var(--sat), 100%);
-    --container-color: dark;
+    --container-color: #121212;
     --header-border-color: 0 4px 4px -4px rgba(255, 255, 255, 0.15),
     0 -4px 4px -4px rgba(255, 255, 255, 0.15);
     --border-color: rgba(255, 255, 255, 0.1);

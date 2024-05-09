@@ -1,7 +1,9 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { ArrowRightAltRounded } from "@mui/icons-material";
+import { ArrowRightAltRounded, CloseRounded } from "@mui/icons-material";
 import "./contact.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const form = useRef();
@@ -9,10 +11,54 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm("service_vdpiqgy", "template_0o0nno5", form.current, {
-      publicKey: "YZbIkZ7DftvUUdUb1",
+    const name = form.current.name.value;
+    const email = form.current.email.value;
+    const project = form.current.project.value;
+
+    // Regular expression for email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!name || !email || !project) {
+      // Display toast message if any required field is empty
+      notify("Please enter all details.");
+      return;
+    } else if (!emailRegex.test(email)) {
+      // Display toast message if email is invalid
+      notify("Please enter a valid email address.");
+      return;
+    }
+
+    emailjs
+      .sendForm("service_vdpiqgy", "template_0o0nno5", form.current, {
+        publicKey: "YZbIkZ7DftvUUdUb1",
+      })
+      .then(() => {
+        notify("Email sent successfully!");
+        e.target.reset(); // Reset the form
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+        notify("Error sending email. Please try again later.");
+      });
+  };
+
+  const notify = (message) => {
+    toast(message, {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      closeButton: () => <CloseRounded />,
+      style: {
+        border: "0.5px solid var(--border-color)",
+        borderRadius: "15px",
+        color: "var(--title-color)",
+        backgroundColor: "var(--container-color)",
+        alignItems: "center",
+      },
     });
-    e.target.reset();
   };
 
   return (
@@ -106,13 +152,14 @@ const Contact = () => {
                 ></path>
                 <path
                   d="M10.11 14.7052C9.92005 14.7052 9.73005 14.6352 9.58005 14.4852C9.29005 14.1952 9.29005 13.7152 9.58005 13.4252L13.16 9.83518C13.45 9.54518 13.93 9.54518 14.22 9.83518C14.51 10.1252 14.51 10.6052 14.22 10.8952L10.64 14.4852C10.5 14.6352 10.3 14.7052 10.11 14.7052Z"
-                  fill="var(--container-color"
+                  fill="var(--container-color)"
                 ></path>
               </svg>
             </button>
           </form>
         </div>
       </div>
+      <ToastContainer />
     </section>
   );
 };

@@ -10,30 +10,35 @@ export const projectsData = [
     image: Work1,
     title: "Web Design 1",
     category: "web",
+    link: "http://www.google.com",
   },
   {
     id: 2,
     image: Work2,
-    title: "app",
+    title: "App Design",
     category: "app",
+    link: "http://www.google.com",
   },
   {
     id: 3,
     image: Work3,
     title: "Web Design 3",
     category: "web",
+    link: "http://www.google.com",
   },
   {
     id: 4,
     image: Work4,
     title: "Web Design 4",
     category: "web",
+    link: "http://www.google.com",
   },
   {
     id: 5,
     image: Work5,
     title: "Web Design 5",
     category: "photography",
+    link: "http://www.google.com",
   },
 ];
 

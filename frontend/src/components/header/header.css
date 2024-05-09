@@ -70,6 +70,7 @@
     }
 
     .nav {
+        padding-top: 0.50rem;
         height: var(--header-height);
     }
 

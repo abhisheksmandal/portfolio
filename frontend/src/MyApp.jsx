@@ -23,6 +23,7 @@ function MyApp() {
         sx={{
           zIndex: 5,
           bgcolor: theme.palette.mode === "dark" ? "white" : "black",
+          marginBottom: "0.25rem",
           marginLeft: "0.5rem",
           border: "2px solid grey",
           // padding: "6px", // Adjust padding to make it smaller
