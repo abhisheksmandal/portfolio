@@ -1,3 +1,4 @@
+import React, { useState, useEffect, useRef } from "react";
 import {
   AppsRounded,
   CloseRounded,
@@ -8,20 +9,34 @@ import {
   PhotoRounded,
   SendRounded,
 } from "@mui/icons-material";
-import React, { useState } from "react";
 import "./header.css";
 import ToggleColorMode from "../../ToggleColorMode";
 import { Box } from "@mui/material";
 
 const Header = () => {
-  window.addEventListener("scroll", function () {
-    const header = document.querySelector(".header");
-    if (this.scrollY >= 560) header.classList.add("scroll-header");
-    else header.classList.remove("scroll-header");
-  });
-  // Toggle Menu
   const [Toggle, showMenu] = useState(false);
   const [activeNav, setActiveNav] = useState("#home");
+
+  const navRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+          setActiveNav(`#${section.id}`);
+        }
+      });
+    };
+
+    document.addEventListener("scroll", handleScroll);
+
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <header className="header">
@@ -31,17 +46,18 @@ const Header = () => {
           <ToggleColorMode />
         </a>
 
-        <Box className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
+        <Box
+          className={Toggle ? "nav__menu show-menu" : "nav__menu"}
+          ref={navRef}
+        >
           <ul className="nav__list grid">
             <li className="nav__item">
               <a
                 href="#home"
-                onClick={() => setActiveNav("#home")}
                 className={
                   activeNav === "#home" ? "nav__link active-link" : "nav__link"
                 }
               >
-                {/* <i className="uil uil- nav__icon"></i> */}
                 <div className="nav__icon">
                   <HomeRounded />
                 </div>
@@ -51,12 +67,10 @@ const Header = () => {
             <li className="nav__item">
               <a
                 href="#about"
-                onClick={() => setActiveNav("#about")}
                 className={
                   activeNav === "#about" ? "nav__link active-link" : "nav__link"
                 }
               >
-                {/* <i className="uil uil- nav__icon"></i> */}
                 <div className="nav__icon">
                   <InfoRounded />
                 </div>
@@ -66,14 +80,12 @@ const Header = () => {
             <li className="nav__item">
               <a
                 href="#skills"
-                onClick={() => setActiveNav("#skills")}
                 className={
                   activeNav === "#skills"
                     ? "nav__link active-link"
                     : "nav__link"
                 }
               >
-                {/* <i className="uil uil- nav__icon"></i> */}
                 <div className="nav__icon">
                   <DescriptionRounded />
                 </div>
@@ -83,14 +95,12 @@ const Header = () => {
             <li className="nav__item">
               <a
                 href="#services"
-                onClick={() => setActiveNav("#services")}
                 className={
                   activeNav === "#services"
                     ? "nav__link active-link"
                     : "nav__link"
                 }
               >
-                {/* <i className="uil uil- nav__icon"></i> */}
                 <div className="nav__icon">
                   <MiscellaneousServicesRounded />
                 </div>
@@ -100,14 +110,12 @@ const Header = () => {
             <li className="nav__item">
               <a
                 href="#portfolio"
-                onClick={() => setActiveNav("#portfolio")}
                 className={
                   activeNav === "#portfolio"
                     ? "nav__link active-link"
                     : "nav__link"
                 }
               >
-                {/* <i className="uil uil- nav__icon"></i> */}
                 <div className="nav__icon">
                   <PhotoRounded />
                 </div>
@@ -117,14 +125,12 @@ const Header = () => {
             <li className="nav__item">
               <a
                 href="#contact"
-                onClick={() => setActiveNav("#contact")}
                 className={
                   activeNav === "#contact"
                     ? "nav__link active-link"
                     : "nav__link"
                 }
               >
-                {/* <i className="uil uil- nav__icon"></i> */}
                 <div className="nav__icon">
                   <SendRounded />
                 </div>
