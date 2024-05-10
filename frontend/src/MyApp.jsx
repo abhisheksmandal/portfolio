@@ -21,7 +21,7 @@ function MyApp() {
         size="small"
         type="button"
         sx={{
-          zIndex: 5,
+          // zIndex: 0,
           bgcolor: theme.palette.mode === "dark" ? "white" : "black",
           marginBottom: "0.25rem",
           marginLeft: "0.5rem",

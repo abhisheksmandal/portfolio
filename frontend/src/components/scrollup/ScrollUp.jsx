@@ -1,4 +1,7 @@
-import { KeyboardDoubleArrowUpRounded } from "@mui/icons-material";
+import {
+  ArrowCircleUpRounded,
+  KeyboardDoubleArrowUpRounded,
+} from "@mui/icons-material";
 import React from "react";
 import "./scrollup.css";
 
@@ -10,9 +13,10 @@ const ScrollUp = () => {
   });
   return (
     <a href="#" className="scrollup">
-      <div className="scrollup__icon">
-        <KeyboardDoubleArrowUpRounded />
-      </div>
+      <span className="scrollup__icon">
+        {/* <KeyboardDoubleArrowUpRounded /> */}
+        <ArrowCircleUpRounded />
+      </span>
     </a>
   );
 };

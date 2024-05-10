@@ -66,13 +66,21 @@
     column-gap: 0.25rem;
 }
 
-.work__button-icon {
-    font-size: 1rem;
+.work__button-icon svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
     transition: 0.4s;
 }
 
-.work__button:hover .work__button-icon {
-    transform: translateX(0.25rem);
+.work__button:hover .work__button-icon svg {
+    color: var(--title-color-dark);
+    transform: translateX(0.5rem);
+}
+
+.work__button:hover {
+    color: var(--title-color-dark);
 }
 
 /* active work */

@@ -66,7 +66,14 @@ const Services = () => {
           <div className="services__content" key={index}>
             <div>
               <div className="services__icon">{service.icon}</div>
-              <h3 className="services__title">{service.title}</h3>
+              <h3 className="services__title">
+                {service.title.split(" ").map((word, i) => (
+                  <span key={i}>
+                    {word}
+                    <br />
+                  </span>
+                ))}
+              </h3>
 
               <span
                 className="services__button"
@@ -86,9 +93,9 @@ const Services = () => {
                 }
               >
                 <div className="services__modal-content">
-                  <div className="services__modal-close">
+                  <span className="services__modal-close">
                     <CloseRounded onClick={() => toggleTab(0)} />
-                  </div>
+                  </span>
 
                   <h3 className="services__modal-title">{service.title}</h3>
                   <p className="services__modal-description">
@@ -98,9 +105,9 @@ const Services = () => {
                   <ul className="services__modal-services grid">
                     {service.services.map((item, i) => (
                       <li className="services__modal-service" key={i}>
-                        <div className="services__modal-icon">
+                        <span className="services__modal-icon">
                           <CheckCircleRounded />
-                        </div>
+                        </span>
                         <p className="services__modal-info">{item}</p>
                       </li>
                     ))}

@@ -41,9 +41,9 @@ const ScrollDown = () => {
           ></path>
         </svg>
         <span className="home__scroll-name">Scroll Down</span>
-        <div className="home__scroll-arrow">
+        <span className="home__scroll-arrow">
           <KeyboardDoubleArrowDownRounded />
-        </div>
+        </span>
       </a>
     </div>
   );

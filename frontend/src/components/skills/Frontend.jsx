@@ -18,7 +18,9 @@ const Frontend = () => {
         <div className="skills__group">
           {frontendSkills.map((skill, index) => (
             <div className="skills__data" key={index}>
-              <VerifiedRounded />
+              <span className="skill__verified">
+                <VerifiedRounded />
+              </span>
 
               <div>
                 <h3 className="skills__name">{skill.name}</h3>

@@ -28,7 +28,7 @@ const Info = () => {
     <div className="about__info grid">
       {infoData.map((item, index) => (
         <div className="about__box" key={index}>
-          <div className="about__icon">{item.icon}</div>
+          <span className="about__icon">{item.icon}</span>
           <h3 className="about__title">{item.title}</h3>
           <span className="about__subtitle">{item.subtitle}</span>
         </div>

@@ -1,17 +1,30 @@
 .scrollup {
     position: fixed;
-    right: 2.5rem;
+    right: 3.5rem;
     bottom: -20%;
     background-color: var(--title-color);
     opacity: 0.8;
-    padding: 0.3rem 0.5rem;
-    border-radius: 0.4rem;
+    padding: 0.3rem;
+    border-radius: 50%;
     z-index: var(--z-tooltip);
     transition: 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Center the content vertically */
+}
+
+.scrollup__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Center the icon vertically and horizontally */
+    width: 100%;
+    height: 100%;
 }
 
 .scrollup__icon svg {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: var(--container-color);
 }
 
@@ -23,16 +36,15 @@
     bottom: 3rem;
 }
 
-/*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (max-width: 992px) {
     .scrollup {
         right: 1.5rem;
-        padding: 0.25rem 0.4rem;
+        /* padding: 0.25rem 0.4rem; */
     }
 
     .scrollup__icon svg {
-        font-size: 1.25rem;
+        font-size: 2.25rem;
     }
 }
 

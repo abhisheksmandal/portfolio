@@ -26,7 +26,7 @@
 }
 
 .services__button {
-    color: var(--title-color);
+    color: var(--text-color);
     font-size: var(--small-font-size);
     display: inline-flex;
     align-items: center;
@@ -34,13 +34,21 @@
     cursor: pointer;
 }
 
-.services__button-icon {
-    font-size: 1rem;
+.services__button-icon svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
     transition: 0.3s;
 }
 
-.services__button:hover .services__button-icon {
-    transform: translateX(0.25rem);
+.services__button:hover .services__button-icon svg {
+    color: var(--title-color-dark);
+    transform: translateX(1rem);
+}
+
+.services__button:hover {
+    color: var(--title-color-dark);
 }
 
 .services__modal {
@@ -68,7 +76,7 @@
     border-radius: 1.5rem;
 }
 
-.services__modal-close {
+.services__modal-close svg {
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
@@ -104,7 +112,10 @@
     column-gap: 0.5rem;
 }
 
-.services__modal-icon {
+.services__modal-icon svg {
+    display: flex;
+        justify-content: center;
+        align-items: center;
     color: var(--title-color);
     font-size: 1.1rem;
 }

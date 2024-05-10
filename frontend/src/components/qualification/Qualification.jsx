@@ -28,9 +28,10 @@ const Qualification = () => {
             }
             onClick={() => toggleTab(1)}
           >
-            <div className="qualification__icon">
-              <SchoolRounded /> Education
-            </div>
+            <span className="qualification__icon">
+              <SchoolRounded />
+            </span>
+            Education
           </div>
 
           <div
@@ -41,9 +42,10 @@ const Qualification = () => {
             }
             onClick={() => toggleTab(2)}
           >
-            <div className="qualification__icon">
-              <WorkRounded /> Experience
-            </div>
+            <span className="qualification__icon">
+              <WorkRounded />
+            </span>
+            Experience
           </div>
         </div>
 

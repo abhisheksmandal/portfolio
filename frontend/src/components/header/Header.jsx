@@ -64,9 +64,9 @@ const Header = () => {
                   activeNav === "#home" ? "nav__link active-link" : "nav__link"
                 }
               >
-                <div className="nav__icon">
+                <span className="nav__icon">
                   <HomeRounded />
-                </div>
+                </span>
                 Home
               </a>
             </li>
@@ -77,9 +77,9 @@ const Header = () => {
                   activeNav === "#about" ? "nav__link active-link" : "nav__link"
                 }
               >
-                <div className="nav__icon">
+                <span className="nav__icon">
                   <InfoRounded />
-                </div>
+                </span>
                 About
               </a>
             </li>
@@ -92,9 +92,9 @@ const Header = () => {
                     : "nav__link"
                 }
               >
-                <div className="nav__icon">
+                <span className="nav__icon">
                   <DescriptionRounded />
-                </div>
+                </span>
                 Skills
               </a>
             </li>
@@ -107,9 +107,9 @@ const Header = () => {
                     : "nav__link"
                 }
               >
-                <div className="nav__icon">
+                <span className="nav__icon">
                   <MiscellaneousServicesRounded />
-                </div>
+                </span>
                 Services
               </a>
             </li>
@@ -122,9 +122,9 @@ const Header = () => {
                     : "nav__link"
                 }
               >
-                <div className="nav__icon">
+                <span className="nav__icon">
                   <PhotoRounded />
-                </div>
+                </span>
                 Portfolio
               </a>
             </li>
@@ -137,9 +137,9 @@ const Header = () => {
                     : "nav__link"
                 }
               >
-                <div className="nav__icon">
+                <span className="nav__icon">
                   <SendRounded />
-                </div>
+                </span>
                 Contact
               </a>
             </li>

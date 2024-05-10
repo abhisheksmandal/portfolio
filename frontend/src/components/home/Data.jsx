@@ -9,9 +9,10 @@ const Data = () => {
   };
 
   const sentences = [
+    "Frontend Developer",
+    "Backend Developer",
     "DevOps System Administrator",
     "Freelancer",
-    "Photographer",
   ];
 
   return (

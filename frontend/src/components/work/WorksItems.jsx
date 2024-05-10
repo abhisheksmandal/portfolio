@@ -8,9 +8,9 @@ const WorksItems = ({ item }) => {
       <h3 className="work__title">{item.title}</h3>
       <a href={item.link} className="work__button" target="_blank">
         Demo
-        <div className="work__button-icon">
+        <span className="work__button-icon">
           <ArrowRightAltRounded />
-        </div>
+        </span>
       </a>
     </div>
   );

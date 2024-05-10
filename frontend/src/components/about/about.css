@@ -1,13 +1,31 @@
 .about__container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    column-gap: 4rem;
+    column-gap: 0.5rem;
 }
 
-.about__img {
+/* .about__img {
     width: 350px;
     border-radius: 1.5rem;
     justify-self: center;
+} */
+
+.about__img {
+    /* Specify the initial background image */
+    background: url('../../assets/about.jpg') no-repeat center/cover;
+    /* Set other background properties */
+    border-radius: 1.5rem;
+    width: 350px;
+    height: 350px;
+    justify-self: center;
+    /* Add transition for smooth hover effect */
+    transition: background 1s;
+    /* This transition applies to changes in the background property */
+}
+
+.about__img:hover {
+    /* Change the background image on hover */
+    background-image: url('../../assets/about_colored.jpg');
 }
 
 .about__info {

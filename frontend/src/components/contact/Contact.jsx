@@ -1,6 +1,11 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { ArrowRightAltRounded, CloseRounded } from "@mui/icons-material";
+import {
+  ArrowRightAltRounded,
+  CloseRounded,
+  MarkAsUnreadRounded,
+  WhatsApp,
+} from "@mui/icons-material";
 import "./contact.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -16,7 +21,7 @@ const Contact = () => {
     const project = form.current.project.value;
 
     // Regular expression for email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
     if (!name || !email || !project) {
       // Display toast message if any required field is empty
@@ -73,12 +78,19 @@ const Contact = () => {
 
           <div className="contact__info">
             <div className="contact__card">
-              <div className="contact__card-icon">icon</div>
+              <span className="contact__card-icon">
+                <MarkAsUnreadRounded />
+              </span>
 
               <h3 className="contact__card-title">Email</h3>
-              <span className="contact__card-data">user@gmail.com</span>
+              <span className="contact__card-data">
+                abhishek.s.mandal@gmail.com
+              </span>
 
-              <a href="mailto:user@gmail.com" className="contact__button">
+              <a
+                href="mailto:abhishek.s.mandal@gmail.com"
+                className="contact__button"
+              >
                 Write me{" "}
                 <span className="contact__button-icon">
                   <ArrowRightAltRounded />
@@ -87,12 +99,14 @@ const Contact = () => {
             </div>
 
             <div className="contact__card">
-              <div className="contact__card-icon">icon</div>
+              <span className="contact__card-icon">
+                <WhatsApp />
+              </span>
 
               <h3 className="contact__card-title">WhatsApp</h3>
-              <span className="contact__card-data">+91 09876 54321</span>
+              <span className="contact__card-data">+91 9112084490</span>
 
-              <a href="https://wa.me/910987654321" className="contact__button">
+              <a href="https://wa.me/919112084490" className="contact__button">
                 Write me{" "}
                 <span className="contact__button-icon">
                   <ArrowRightAltRounded />
@@ -119,7 +133,7 @@ const Contact = () => {
             <div className="contact__form-div">
               <label className="contact__form-tag">Email</label>
               <input
-                type="email"
+                type="text"
                 name="email"
                 className="contact__form-input"
                 placeholder="Insert your email id"

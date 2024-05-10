@@ -16,13 +16,25 @@
     cursor: pointer;
 }
 
-.qualification__button:hover {
-    color: var(--title-color-dark);
+.qualification__button svg {
+    transition: 0.3s;
 }
 
-.qualification__icon {
+.qualification__button:hover {
+    color: var(--title-color-dark);
+    /* color: rebeccapurple; */
+}
+
+.qualification__button:hover svg {
+    font-size: 2.5rem;
+}
+
+.qualification__icon svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.8rem;
-    margin-right: var(--mb-0-25);
+    margin-right: var(--mb-0-5);
 }
 
 .qualification__active svg {
