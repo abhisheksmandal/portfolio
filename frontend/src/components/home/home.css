@@ -233,6 +233,11 @@
     .home__scroll {
         display: none;
     }
+
+    .home__social {
+        row-gap: 2rem;
+        justify-self: center;
+    }
 }
 
 @media screen and (max-width: 576px) {

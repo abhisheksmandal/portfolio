@@ -223,3 +223,27 @@ img {
     margin-right: var(--mb-1);
   }
 }
+
+.cursor-glow {
+  position: absolute;
+  z-index: 9999;
+  pointer-events: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: cursor-glow-animation 1s infinite alternate;
+  box-shadow: 0 0 10px 5px var(--title-color);
+  filter: blur(5px);
+}
+
+@keyframes cursor-glow-animation {
+  0% {
+    transform: scale(1);
+    opacity: 0.1;
+  }
+  100% {
+    transform: scale(0.0001);
+    opacity: 0;
+  }
+}
+
