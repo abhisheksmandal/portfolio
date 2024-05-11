@@ -29,19 +29,35 @@ const Footer = () => {
         </ul>
 
         <div className="footer__social">
-          <a href="#instagram" className="home__social-icon" target="_blank">
+          <a
+            href="https://www.instagram.com/abhisheksmandal/?hl=en"
+            className="home__social-icon"
+            target="_blank"
+          >
             <Instagram />
           </a>
 
-          <a href="#twitter" className="home__social-icon" target="_blank">
+          <a
+            href="https://twitter.com/abhisheksmandal"
+            className="home__social-icon"
+            target="_blank"
+          >
             <X />
           </a>
 
-          <a href="#linkedin" className="home__social-icon" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/abhishek-mandal-44b578216/"
+            className="home__social-icon"
+            target="_blank"
+          >
             <LinkedIn />
           </a>
 
-          <a href="#github" className="home__social-icon" target="_blank">
+          <a
+            href="https://github.com/abhisheksmandal"
+            className="home__social-icon"
+            target="_blank"
+          >
             <GitHub />
           </a>
         </div>
