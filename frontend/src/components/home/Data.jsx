@@ -5,7 +5,7 @@ const Data = () => {
   const content = {
     title: "Abhishek Mandal",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi iste nihil voluptatibus quibusdam possimus reprehenderit consequatur, consectetur culpa doloremque esse.",
+      "Welcome to my digital playground! Explore the magic of my portfolio, where innovation and creativity collide to shape the future of digital experiences. Join me on this journey of exploration and discovery!",
   };
 
   const sentences = [

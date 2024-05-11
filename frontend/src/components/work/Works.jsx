@@ -42,9 +42,16 @@ const Works = () => {
       </div>
 
       <div className="work__container container grid">
-        {projects.map((item) => {
-          return <WorksItems item={item} key={item.id} />;
-        })}
+        {projects.length > 0 ? (
+          projects.map((item) => {
+            return <WorksItems item={item} key={item.id} />;
+          })
+        ) : (
+          <p>
+            Patience, friend! Our project gallery is under construction. Big
+            things ahead!
+          </p>
+        )}
       </div>
     </div>
   );

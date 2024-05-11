@@ -74,6 +74,15 @@
     transition: 0.4s;
 }
 
+p {
+    /* font-size: 16px;
+    color: #333; */
+    /* Change color as needed */
+    text-align: center;
+    margin-top: 20px;
+    /* Adjust margin as needed */
+}
+
 .work__button:hover .work__button-icon svg {
     color: var(--title-color-dark);
     transform: translateX(0.5rem);

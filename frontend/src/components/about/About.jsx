@@ -18,9 +18,9 @@ const About = () => {
           <Info />
 
           <p className="about__description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo fugiat
-            incidunt tenetur error earum labore voluptatibus consectetur ad,
-            autem dicta.
+            Hello! I'm Abhishek Mandal, a passionate Developer dedicated to
+            continual learning and growth, crafting captivating digital
+            experiences through innovative creativity and design.
           </p>
 
           <a href={CV} className="button button--flex">

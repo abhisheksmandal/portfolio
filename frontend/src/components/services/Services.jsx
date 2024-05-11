@@ -14,38 +14,38 @@ const Services = () => {
 
   const servicesData = [
     {
-      title: "Frontend Development",
+      title: "Front-end Development",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae obcaecati iure suscipit explicabo commodi dolores temporibus eveniet adipisci laboriosam architecto quas deserunt minima, ab maxime numquam eligendi, dolorum laudantium rem.",
+        "Crafting captivating user interfaces and immersive web experiences using cutting-edge technologies and design principles.",
       services: [
-        "I develop user interface.",
-        "Web page development.",
-        "Server Management",
-        "This is just a test Drive",
+        "Responsive and pixel-perfect design",
+        "Interactive user interface development",
+        "Cross-browser and device compatibility",
+        "Performance optimization for faster loading times",
       ],
       icon: <CodeRounded />,
     },
     {
-      title: "Backend Development",
+      title: "Back-end Development",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae obcaecati iure suscipit explicabo commodi dolores temporibus eveniet adipisci laboriosam architecto quas deserunt minima, ab maxime numquam eligendi, dolorum laudantium rem.",
+        "Building powerful server-side applications and APIs to fuel your web projects with efficiency and scalability.",
       services: [
-        "I develop user interface.",
-        "Web page development.",
-        "Server Management",
-        "This is just a test Drive",
+        "RESTful API design and development",
+        "Database architecture and management",
+        "Authentication and authorization systems",
+        "Integration with third-party services and APIs",
       ],
       icon: <DataObjectRounded />,
     },
     {
       title: "DevOps Engineering",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae obcaecati iure suscipit explicabo commodi dolores temporibus eveniet adipisci laboriosam architecto quas deserunt minima, ab maxime numquam eligendi, dolorum laudantium rem.",
+        "Implementing robust infrastructure and automation solutions to streamline development, testing, and deployment workflows.",
       services: [
-        "I develop user interface.",
-        "Web page development.",
-        "Server Management",
-        "This is just a test Drive",
+        "Continuous integration and deployment (CI/CD) pipelines",
+        "Infrastructure as code (IaC) setup and management",
+        "Monitoring, logging, and performance optimization",
+        "Security hardening and compliance management",
       ],
       icon: <AllInclusiveRounded />,
     },

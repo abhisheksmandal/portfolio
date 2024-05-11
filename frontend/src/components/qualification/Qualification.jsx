@@ -60,10 +60,58 @@ const Qualification = () => {
             <div className="qualification__data">
               <div>
                 <h3 className="qualification__title">
+                  Bachelor of Computer Applications
+                </h3>
+                <span className="qualification__subtitle">
+                  Dnyanprassarak Mandal's College and Research Centre
+                </span>
+                <div className="qualification__calender">
+                  <CalendarMonthRounded /> 2020 - 2023
+                </div>
+              </div>
+
+              <div>
+                <span className="qualification__rounder"></span>
+                <span className="qualification__line"></span>
+              </div>
+            </div>
+
+            <div className="qualification__data">
+              <div></div>
+
+              <div>
+                <span className="qualification__rounder"></span>
+                <span className="qualification__line"></span>
+              </div>
+
+              <div>
+                <h3 className="qualification__title">
+                  12th (Computer Science)
+                </h3>
+                <span className="qualification__subtitle">
+                  Dnyanprassarak Mandal's Higher Secondary School
+                </span>
+                <div className="qualification__calender">
+                  <CalendarMonthRounded /> 2020 - 2023
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className={
+              toggleState === 2
+                ? "qualification__content qualification__content-active"
+                : "qualification__content"
+            }
+          >
+            <div className="qualification__data">
+              <div>
+                <h3 className="qualification__title">
                   Junior DevOps System Administrator
                 </h3>
                 <span className="qualification__subtitle">
-                  Sapna Technologies
+                  SAPNATECH INDIA LLP
                 </span>
                 <div className="qualification__calender">
                   <CalendarMonthRounded /> 2023 - Present
@@ -87,57 +135,30 @@ const Qualification = () => {
               <div>
                 <h3 className="qualification__title">Help Desk Engineer</h3>
                 <span className="qualification__subtitle">
-                  Microsense Pvt Ltd
+                  Microsense Private Limited
                 </span>
                 <div className="qualification__calender">
                   <CalendarMonthRounded /> 2020 - 2023
                 </div>
               </div>
             </div>
-          </div>
 
-          <div
-            className={
-              toggleState === 2
-                ? "qualification__content qualification__content-active"
-                : "qualification__content"
-            }
-          >
             <div className="qualification__data">
               <div>
                 <h3 className="qualification__title">
-                  DevOps System Administrator
+                  Full-stack Developer (Internship)
                 </h3>
                 <span className="qualification__subtitle">
-                  Sapna Technologies
+                  HDSOFT Technologies (P) Ltd.
                 </span>
                 <div className="qualification__calender">
-                  <CalendarMonthRounded /> 2023 - Present
+                  <CalendarMonthRounded /> 2022 - 2023
                 </div>
               </div>
 
               <div>
                 <span className="qualification__rounder"></span>
                 <span className="qualification__line"></span>
-              </div>
-            </div>
-
-            <div className="qualification__data">
-              <div></div>
-
-              <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
-              </div>
-
-              <div>
-                <h3 className="qualification__title">SuperHero</h3>
-                <span className="qualification__subtitle">
-                  Microsense Pvt Ltd
-                </span>
-                <div className="qualification__calender">
-                  <CalendarMonthRounded /> 2020 - 2023
-                </div>
               </div>
             </div>
           </div>

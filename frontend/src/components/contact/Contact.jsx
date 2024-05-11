@@ -69,7 +69,7 @@ const Contact = () => {
 
   return (
     <section className="contact section" id="contact">
-      <h2 className="section__title">Get in touch</h2>
+      <h2 className="section__title">Get in Touch!</h2>
       <span className="section__subtitle">Contact Me</span>
 
       <div className="contact__container container grid">
@@ -91,7 +91,7 @@ const Contact = () => {
                 href="mailto:abhishek.s.mandal@gmail.com"
                 className="contact__button"
               >
-                Write me{" "}
+                Ping me{" "}
                 <span className="contact__button-icon">
                   <ArrowRightAltRounded />
                 </span>
@@ -107,7 +107,7 @@ const Contact = () => {
               <span className="contact__card-data">+91 9112084490</span>
 
               <a href="https://wa.me/919112084490" className="contact__button">
-                Write me{" "}
+                Ping me{" "}
                 <span className="contact__button-icon">
                   <ArrowRightAltRounded />
                 </span>
@@ -117,7 +117,7 @@ const Contact = () => {
         </div>
 
         <div className="content__content">
-          <h3 className="contact__title">Write me your project</h3>
+          <h3 className="contact__title">Send me a message</h3>
 
           <form ref={form} onSubmit={sendEmail} className="contact__form">
             <div className="contact__form-div">
@@ -147,7 +147,7 @@ const Contact = () => {
                 cols="30"
                 rows="10"
                 className="contact__form-input"
-                placeholder="Write your project"
+                placeholder="Write your message"
               ></textarea>
             </div>
 

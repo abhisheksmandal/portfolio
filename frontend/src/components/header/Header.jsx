@@ -115,9 +115,9 @@ const Header = () => {
             </li>
             <li className="nav__item">
               <a
-                href="#portfolio"
+                href="#projects"
                 className={
-                  activeNav === "#portfolio"
+                  activeNav === "#projects"
                     ? "nav__link active-link"
                     : "nav__link"
                 }
