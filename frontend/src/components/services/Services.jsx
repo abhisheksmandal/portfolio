@@ -106,7 +106,7 @@ const Services = () => {
                     {service.services.map((item, i) => (
                       <li className="services__modal-service" key={i}>
                         <span className="services__modal-icon">
-                          <CheckCircleRounded />
+                          {/* <CheckCircleRounded /> */}
                         </span>
                         <p className="services__modal-info">{item}</p>
                       </li>
