@@ -19,7 +19,7 @@
     height: 350px;
     justify-self: center;
     /* Add transition for smooth hover effect */
-    transition: background 1s;
+    transition: background 0.3s;
     /* This transition applies to changes in the background property */
 }
 
