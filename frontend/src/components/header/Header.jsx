@@ -125,7 +125,7 @@ const Header = () => {
                 <span className="nav__icon">
                   <PhotoRounded />
                 </span>
-                Portfolio
+                Projects
               </a>
             </li>
             <li className="nav__item">
