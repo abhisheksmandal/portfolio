@@ -113,6 +113,11 @@
     /* Add delay if needed: animation-delay: 1s; or else add 1s after infinite*/
 }
 
+.home__img:hover {
+    animation: profile__animate 0.3s ease-in-out infinite;
+    /* Adjust duration as needed */
+}
+
 @keyframes profile__animate {
     0% {
         border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
