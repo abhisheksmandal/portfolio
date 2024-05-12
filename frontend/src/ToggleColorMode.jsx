@@ -45,6 +45,7 @@ function ToggleColorMode() {
     --header-border-color: 0 4px 4px -4px rgba(0, 0, 0, 0.15),
     0 -4px 4px -4px rgba(0, 0, 0, 0.15);
     --border-color: rgba(0, 0, 0, 0.1);
+    --border-shadow-color: rgb(255 255 255 / 30%);
   `;
 
   const darkModeCssVariables = `
@@ -57,6 +58,7 @@ function ToggleColorMode() {
     --header-border-color: 0 4px 4px -4px rgba(255, 255, 255, 0.15),
     0 -4px 4px -4px rgba(255, 255, 255, 0.15);
     --border-color: rgba(255, 255, 255, 0.1);
+    --border-shadow-color: rgb(255 255 255 / 70%);
   `;
 
   const theme = React.useMemo(

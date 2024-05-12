@@ -75,10 +75,14 @@
     /* width: 400px; */
 }
 
+.home__subtitle p {
+    display: flex;
+}
+
 .home__subtitle::before {
     content: "";
     position: absolute;
-    width: 80px;
+    width: 70px;
     height: 1px;
     background-color: var(--text-color);
     left: 0;
@@ -265,6 +269,10 @@
         height: 180px;
         margin: 0 auto;
         /* Centering the image horizontally */
+    }
+
+    .home__subtitle p {
+        display:block;
     }
 
     .home__hand {
