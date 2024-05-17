@@ -9,10 +9,11 @@ const Data = () => {
   };
 
   const sentences = [
-    "Frontend Developer",
-    "Backend Developer",
+    // "Frontend Developer",
+    // "Backend Developer",
     "DevOps System Administrator",
-    "Freelancer",
+    "Enthusiast Learner",
+    // "Freelancer",
   ];
 
   return (
