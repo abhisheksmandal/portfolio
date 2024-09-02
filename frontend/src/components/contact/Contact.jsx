@@ -84,11 +84,11 @@ const Contact = () => {
 
               <h3 className="contact__card-title">Email</h3>
               <span className="contact__card-data">
-                abhishek.s.mandal@gmail.com
+                official.abhishek.mandal@gmail.com
               </span>
 
               <a
-                href="mailto:abhishek.s.mandal@gmail.com"
+                href="mailto:official.abhishek.mandal@gmail.com"
                 className="contact__button"
               >
                 Ping me{" "}
