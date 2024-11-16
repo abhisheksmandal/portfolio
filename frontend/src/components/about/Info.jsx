@@ -9,7 +9,7 @@ const infoData = [
   {
     icon: <EmojiEventsRounded />,
     title: "Experience",
-    subtitle: "1 Year Working",
+    subtitle: "2+ Years of Working",
   },
   {
     icon: <AssignmentTurnedInRounded />,
