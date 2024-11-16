@@ -9,7 +9,7 @@ const devOpsSkills = [
   { name: "Jenkins", level: "Intermediate" },         // Widely used for CI/CD pipelines.
   { name: "Ansible", level: "Intermediate" },         // Popular for configuration management and automation.
   { name: "Nginx", level: "Beginner" },               // Commonly used as a web server or reverse proxy.
-  { name: "Apache/Nginx", level: "Intermediate" }     // Important for managing web servers.
+  { name: "Apache", level: "Intermediate" }     // Important for managing web servers.
 ];
 
 
